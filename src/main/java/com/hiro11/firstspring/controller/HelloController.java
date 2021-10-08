@@ -10,7 +10,7 @@ import com.hiro11.firstspring.model.*;
 
 
 
-@RestController
+@RestController //คือ Controller ลูกของ @Controller
 public class HelloController {
 	@Autowired //ติดต่อกับ Repo
 	JokerRepo repo;
