@@ -3,14 +3,16 @@ package com.hiro11.firstspring.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.hiro11.firstspring.model.Joker;
 
 @Controller //Controller แบบ ธรรมดา
+@RequestMapping("/v1") // ต้องเรียกแบบ http://localhost:8080/v1/student แทน
 public class StudentController {
 	
 	@GetMapping("/student")
-	public String listStudent(Model model) {
+		public String listStudent(Model model) {
 		Joker joker = new Joker();
 		joker.setName("ฝน");
 		joker.setWeight(46.5f);
